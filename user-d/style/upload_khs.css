@@ -1,0 +1,12 @@
+.card {
+    border-top-color: #D30202;
+    border-top-width: 5px;
+}
+
+.card-body {
+    background-color: #F7F7F7;
+}
+
+.btn {
+    width: 70%;
+}

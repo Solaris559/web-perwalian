@@ -1,0 +1,10 @@
+.khs-body {
+    padding-left: 150px;
+    padding-right: 150px;
+    justify-content: left;  
+} 
+.khs-form {
+    border-radius:6px;
+    border: 2px solid lightgrey;
+    border-top: 2px solid #dc3545;
+}

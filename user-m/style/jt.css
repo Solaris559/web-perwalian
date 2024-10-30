@@ -1,0 +1,9 @@
+.jt-body {
+    padding-left: 70px;
+    padding-right: 70px;
+    justify-content: left;
+}
+.jt-form {
+    border-radius: 6px;
+    border: 2px solid lightgray;
+}

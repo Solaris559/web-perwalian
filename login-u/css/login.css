@@ -1,0 +1,140 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background: linear-gradient(to bottom, #f9b2b2, #ef4747) no-repeat;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  max-width: 800px;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+  background-color: #ff2828;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 50%;
+}
+
+.left img {
+  width: 150px;
+  height: auto;
+}
+
+.welcome {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.left h2 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.description {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+.right {
+  background-color: #d9d9d9;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  box-shadow: 0 0 15px rgba(57, 39, 39, 0.7);
+}
+
+.login {
+  display: flex;
+  margin-bottom: 20px;
+  font-family: "Inter";
+  font-size: 48px;
+  justify-content: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #000000;
+  font-size: 16px;
+  background-color: transparent;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-bottom: 2px solid #688ac4;
+}
+
+.form-group input:hover {
+  border-bottom: 2px solid #688ac4;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.checkbox-group input {
+  margin-right: 10px;
+}
+
+.checkbox-group label {
+  font-size: 14px;
+}
+
+.login-btn {
+  display: flex;
+  height: 46px;
+  width: 120px;
+  padding: 10px;
+  background-color: #ff2828;
+  border: none;
+  color: #000000;
+  font-weight: bolder;
+  font-size: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  justify-content: center;
+  align-self: center;
+}
+
+.login-btn:hover {
+  color: whitesmoke;
+}

@@ -1,0 +1,23 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-size:cover;
+    background-position:cover;
+    background-repeat:no-repeat;
+}
+.navbar{
+    background-color:maroon;
+}
+p {
+    font-size:18px;
+}
+.sides {
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+.nav-link {
+    border-radius: 6px;
+}
+.activated {
+    background-color:maroon;
+}
