@@ -1,345 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BSPAM Online : Permintaan Janji Temu</title>
     <script src="../login-u/session_start.js"></script>
-    <link
-      rel="stylesheet"
-      href="../vendor/twbs/bootstrap/dist/css/bootstrap.css"
-    />
+    <link rel="stylesheet" href="../vendor/twbs/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="style/style.css" />
-    <link
-      rel="stylesheet"
-      href="../vendor/twbs/bootstrap-icons/font/bootstrap-icons.css"
-    />
+    <link rel="stylesheet" href="../vendor/twbs/bootstrap-icons/font/bootstrap-icons.css" />
     <style>
-      body {
-        background-image: url("picture/bg_main.jpg");
-        background-size: cover; /* Menambahkan background-size */
-        background-attachment: fixed; /* Menjaga latar belakang tetap saat scroll */
-      }
+        body {
+            background-image: url("picture/bg_main.jpg");
+            background-size: cover; /* Menambahkan background-size */
+            background-attachment: fixed; /* Menjaga latar belakang tetap saat scroll */
+        }
 
-      .pjt-body {
-        padding-left: 60px;
-        padding-right: 60px;
-      }
+        .pjt-body {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- Menu sidebar -->
     <div class="offcanvas offcanvas-start" id="canvas">
-      <div class="offcanvas-header text-bg-dark">
-        <h4 class="canva-title pt-2">Dashboard</h4>
-        <button
-          type="button"
-          class="btn-close btn-close-white"
-          data-bs-dismiss="offcanvas"
-        ></button>
-      </div>
-      <div class="offcanvas-body sides">
-        <div class="container-fluid">
-          <div
-            class="container-fluid main text-bg-primary pt-3 pb-2 d-flex flex-column justify-content-start align-items-center shadow"
-          >
-            <div class="container d-flex flex-row">
-              <div>
-                <h2>0</h2>
-              </div>
-              <div class="ms-auto">
-                <h2><i class="bi bi-columns"></i></h2>
-              </div>
-            </div>
-            <div class="container d-flex justify-content-start">
-              <span>Jumlah Permintaan SO</span>
-            </div>
-          </div>
-          <div
-            class="container-fluid main text-bg-warning pt-3 pb-2 d-flex flex-column justify-content-start align-items-center shadow"
-          >
-            <div class="container d-flex flex-row">
-              <div>
-                <h2>0</h2>
-              </div>
-              <div class="ms-auto">
-                <h2><i class="bi bi-calendar3-event"></i></h2>
-              </div>
-            </div>
-            <div class="container d-flex justify-content-start">
-              <span>Jumlah Permintaan Janji Temu</span>
-            </div>
-          </div>
+        <div class="offcanvas-header text-bg-dark">
+            <h4 class="canva-title pt-2">Dashboard</h4>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
         </div>
-        <div class="container-fluid" style="font-size: 12px">
-          <hr />
-          <span>MENU</span>
-          <hr />
+        <div class="offcanvas-body sides">
+            <div class="container-fluid">
+                <div class="container-fluid main text-bg-primary pt-3 pb-2 d-flex flex-column justify-content-start align-items-center shadow">
+                    <div class="container d-flex flex-row">
+                        <div>
+                            <h2>0</h2>
+                        </div>
+                        <div class="ms-auto">
+                            <h2><i class="bi bi-columns"></i></h2>
+                        </div>
+                    </div>
+                    <div class="container d-flex justify-content-start">
+                        <span>Jumlah Permintaan SO</span>
+                    </div>
+                </div>
+                <div class="container-fluid main text-bg-warning pt-3 pb-2 d-flex flex-column justify-content-start align-items-center shadow">
+                    <div class="container d-flex flex-row">
+                        <div>
+                            <h2>0</h2>
+                        </div>
+                        <div class="ms-auto">
+                            <h2><i class="bi bi-calendar3-event"></i></h2>
+                        </div>
+                    </div>
+                    <div class="container d-flex justify-content-start">
+                        <span>Jumlah Permintaan Janji Temu</span>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid" style="font-size:12px;">
+                <hr>
+                <span>MENU</span>
+                <hr>
+            </div>
+            <a href="data_mahasiswa.html" class="nav-link pt-3 pb-3">Data Mahasiswa</a>
+            <a href="data_konsultasi.html" class="nav-link pt-3 pb-3">Data Konsultasi</a>
+            <a href="distribusi_khs.html" class="nav-link pt-3 pb-3">Distribusi KHS</a>
+            <a href="permintaan_so.html" class="nav-link pt-3 pb-3">Permintaan Stop Out</a>
         </div>
-        <a href="data_mahasiswa.html" class="nav-link pt-3 pb-3"
-          >Data Mahasiswa</a
-        >
-        <a href="data_konsultasi.html" class="nav-link pt-3 pb-3"
-          >Data Konsultasi</a
-        >
-        <a href="distribusi_khs.html" class="nav-link pt-3 pb-3"
-          >Distribusi KHS</a
-        >
-        <a href="permintaan_so.html" class="nav-link pt-3 pb-3"
-          >Permintaan Stop Out</a
-        >
-      </div>
     </div>
     <!-- Navigation-bar laman -->
     <div class="container-fluid" style="margin-bottom: 70px">
-      <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
-        <div class="container-fluid">
-          <!-- Bagian Sidebar -->
-          <ul class="navbar-nav">
-            <button
-              type="button"
-              class="btn"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#canvas"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </ul>
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a href="#" class="nav-link active"
-                >Data Konsultasi / Permintaan Janji Temu</a
-              >
-            </li>
-          </ul>
-          <ul class="navbar-nav flex-row d-flex ms-auto">
-            <li class="nav-item dropdown">
-              <a
-                href="#"
-                class="nav-link dropdown-toggle"
-                role="button"
-                data-bs-toggle="dropdown"
-              >
-                <span id="id-show"></span>
-                <img
-                  src="picture/profile.png"
-                  alt="Foto profil"
-                  style="width: 24px; margin-left: 2px; margin-right: 2px"
-                />
-              </a>
-              <ul class="dropdown-menu">
-                <form method="post" id="logout">
-                  <button type="submit" class="btn btn-sm">Keluar</button>
-                </form>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </nav>
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+            <div class="container-fluid">
+                <!-- Bagian Sidebar -->
+                <ul class="navbar-nav">
+                    <button type="button" class="btn" data-bs-toggle="offcanvas" data-bs-target="#canvas">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Data Konsultasi / Permintaan Janji Temu</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav flex-row d-flex ms-auto">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                            <span id="id-show"></span>
+                            <img src="picture/profile.png" alt="Foto profil" style="width: 24px; margin-left: 2px; margin-right: 2px" />
+                        </a>
+                        <ul class="dropdown-menu">
+                            <form method="post" id="logout">
+                                <button type="submit" class="btn btn-sm">Keluar</button>
+                            </form>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
     <!-- Batas Navigation-Bar -->
     <div class="ps-3">
-      <button type="submit" class="btn btn-primary shadow">
-        <a href="data_konsultasi.html" class="nav-link"
-          ><i class="bi bi-arrow-left-short me-1"></i>Back</a
-        >
-      </button>
+        <button type="submit" class="btn btn-primary shadow">
+            <a href="data_konsultasi.html" class="nav-link"><i class="bi bi-arrow-left-short me-1"></i>Back</a>
+        </button>
     </div>
     <div class="container-fluid pt-2 pjt-body">
-      <div class="container-fluid d-flex flex-row">
-        <h4>Permintaan Janji Temu</h4>
-        <form
-          action=""
-          method="post"
-          class="d-flex flex-row ms-auto"
-          id="searchForm"
-        >
-          <div class="row">
-            <div class="col-5">
-              <select class="form-select me-2" name="cell" id="cell">
-                <option>Semester 1</option>
-                <option>Semester 2</option>
-                <option>Semester 3</option>
-                <option>Semester 4</option>
-                <option>Semester 5</option>
-                <option>Semester 6</option>
-              </select>
-            </div>
-            <div class="col-7">
-              <div class="input-group">
-                <input
-                  type="search"
-                  name="cari"
-                  id="cari"
-                  class="form-control"
-                  placeholder="cari nama mahasiswa"
-                />
-                <button type="submit" class="btn btn-primary" name="pencarian">
-                  <i class="bi bi-search"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="container-fluid mt-2">
-        <table class="table table-striped">
-          <thead class="table-danger">
-            <tr>
-              <th>Nama Mahasiswa</th>
-              <th>NIM</th>
-              <th>Tanggal & Waktu</th>
-              <th>Materi</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody id="konsultasi-table-body">
-            <!-- Data dari API akan dimuat di sini -->
-          </tbody>
-        </table>
-      </div>
+        <div class="container-fluid d-flex flex-row">
+            <h4>Permintaan Janji Temu</h4>
+            <form action="" method="post" class="d-flex flex-row ms-auto" id="searchForm">
+                <div class="row">
+                    <div class="col-5">
+                        <select class="form-select me-2" name="cell" id="cell">
+                            <option>Semester 1</option>
+                            <option>Semester 2</option>
+                            <option>Semester 3</option>
+                            <option>Semester 4</option>
+                            <option>Semester 5</option>
+                            <option>Semester 6</option>
+                        </select>
+                    </div>
+                    <div class="col-7">
+                        <div class="input-group">
+                            <input type="search" name="cari" id="cari" class="form-control" placeholder="cari nama mahasiswa" />
+                            <button type="submit" class="btn btn-primary" name="pencarian">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="container-fluid mt-2">
+            <table class="table table-striped">
+                <thead class="table-danger">
+                    <tr>
+                        <th>Nama Mahasiswa</th>
+                        <th>NIM</th>
+                        <th>Tanggal & Waktu</th>
+                        <th>Materi</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="konsultasi-table-body">
+                    <!-- Data dari API akan dimuat di sini -->
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const token = localStorage.getItem("token");
+        document.addEventListener("DOMContentLoaded", function () {
+            const token = localStorage.getItem("token");
 
-        // Jika token tidak ditemukan, arahkan ke halaman login
-        if (!token) {
-          alert("Anda harus login terlebih dahulu.");
-          window.location.href = "../login-u/login-form.php";
-          return;
-        }
+            // Jika token tidak ditemukan, arahkan ke halaman login
+            if (!token) {
+                alert("Anda harus login terlebih dahulu.");
+                window.location.href = "../login-u/login-form.php";
+                return;
+            }
 
-        // Fungsi untuk memuat data janji temu
-        function loadData(filter = "") {
-          fetch("https://apiteam.v-project.my.id/api/perwalian/d/janjitemu", {
-            method: "POST",
+
+                        // Fungsi untuk memuat data janji temu
+                        function loadData(filter = "") {
+                            fetch("https://apiteam.v-project.my.id/api/perwalian/d/janjitemu", {
+                                method: "POST",
+                                headers: {
+                                    'Authorization': `Bearer ${token}`,
+                                    "Content-Type": "application/json",
+                                },
+                            })
+                            .then((response) => {
+                                if (!response.ok) {
+                                    throw new Error('Network response was not ok: ' + response.statusText);
+                                }
+                                return response.json();
+                            })
+                            .then((data) => {
+                                console.log(data); // Logging data untuk debugging
+
+                                if (data.success) {
+                                    const tableBody = document.getElementById("konsultasi-table-body");
+                                    tableBody.innerHTML = ""; // Bersihkan isi tabel
+
+                                    // Menampilkan data janji temu dalam tabel
+                                    data.data.forEach((mahasiswa) => {
+                                        if (mahasiswa.nama.toLowerCase().includes(filter.toLowerCase())) {
+                                            mahasiswa.janji_temu.forEach((janji) => {
+                                                const rowId = janji.id; // ID unik untuk setiap baris
+                                                const row =
+                                                    '<tr id="' + rowId + '">' + // Menambahkan id ke baris
+                                                        '<td>' + mahasiswa.nama + '</td>' +
+                                                        '<td>' + mahasiswa.nim + '</td>' +
+                                                        '<td>' + new Date(janji.tanggal).toLocaleString() + '</td>' +
+                                                        '<td>' + janji.materi + '</td>' +
+                                                        '<td>' +
+                                                            `<button class="btn btn-success" onclick="handleApproval('${janji.id}', '${mahasiswa.nama}', '${mahasiswa.nim}', '${rowId}', 'approve', '${janji.materi}')">Setujui</button>` +
+                                                            `<button class="btn btn-danger" onclick="handleApproval('${janji.id}', '${mahasiswa.nama}', '${mahasiswa.nim}', '${rowId}', 'reject', '${janji.materi}')">Tolak</button>` +
+                                                        '</td>' +
+                                                    '</tr>';
+                                                tableBody.insertAdjacentHTML('beforeend', row);
+                                            });
+                                        }
+                                    });
+                                } else {
+                                    alert(`Gagal memuat data: ${data.message}`);
+                                }
+                            })
+                            .catch((error) => {
+                                console.error('Ada kesalahan:', error);
+                            });
+                        }
+
+                        async function meong(id, nama, nim, rowId, action, materi) {
+    console.log("Row ID yang diterima:", rowId);
+
+    const formData = new FormData();
+    formData.append('setujui', id);
+
+    try {
+        const response1 = await fetch("https://apiteam.v-project.my.id/api/perwalian/d/janjitemu", {
+            method: 'POST',
             headers: {
-              Authorization: `Bearer ${token}`, // Menggunakan backticks
-              "Content-Type": "application/json",
-            },
-          })
-            .then((response) => {
-              if (!response.ok) {
-                throw new Error(
-                  "Network response was not ok: " + response.statusText
-                );
-              }
-              return response.json();
-            })
-            .then((data) => {
-              console.log(data); // Logging data untuk debugging
-
-              if (data.success) {
-                const tableBody = document.getElementById(
-                  "konsultasi-table-body"
-                );
-                tableBody.innerHTML = ""; // Bersihkan isi tabel
-
-                // Menampilkan data janji temu dalam tabel
-                data.data.forEach((mahasiswa) => {
-                  if (
-                    mahasiswa.nama.toLowerCase().includes(filter.toLowerCase())
-                  ) {
-                    mahasiswa.janji_temu.forEach((janji) => {
-                      const rowId = "janji-" + janji.id; // ID unik untuk setiap baris
-                      const row =
-                        '<tr id="' +
-                        rowId +
-                        '">' + // Menambahkan id ke baris
-                        "<td>" +
-                        mahasiswa.nama +
-                        "</td>" +
-                        "<td>" +
-                        mahasiswa.nim +
-                        "</td>" +
-                        "<td>" +
-                        new Date(janji.tanggal).toLocaleString() +
-                        "</td>" +
-                        "<td>" +
-                        janji.materi +
-                        "</td>" +
-                        "<td>" +
-                        '<button class="btn btn-success" onclick="handleApproval(\'' +
-                        janji.id +
-                        "', '" +
-                        mahasiswa.nama +
-                        "', '" +
-                        mahasiswa.nim +
-                        "', '" +
-                        rowId +
-                        "')\">Setujui</button>" +
-                        '<button class="btn btn-danger" onclick="handleApproval(\'' +
-                        janji.id +
-                        "', '" +
-                        mahasiswa.nama +
-                        "')\">Tolak</button>" +
-                        "</td>" +
-                        "</tr>";
-                      tableBody.insertAdjacentHTML("beforeend", row);
-                    });
-                  }
-                });
-              } else {
-                alert(`Gagal memuat data: ${data.message}`);
-              }
-            })
-            .catch((error) => {
-              console.error("Ada kesalahan:", error);
-            });
-        }
-        async function meong(id, nama, nim) {
-          const formData = new FormData();
-          formData.append("setujui", id);
-          fetch("https://apiteam.v-project.my.id/api/perwalian/d/janjitemu", {
-            method: "POST",
-            headers: {
-              Authorization: `Bearer ${token}`,
-              "Content-Type": "application/json",
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json',
             },
             body: formData,
-          })
-            .then((response) => {
-              if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-              }
-              return response.json();
-            })
-            .then((data) => {
-              if (data.success) {
-                alert("Janji temu berhasil disetujui!");
-                loadData(); // Reload data setelah berhasil
-              } else {
-                alert(`Gagal menyetujui janji temu: ${data.message}`);
-              }
-            })
-            .catch((error) => {
-              console.error("Ada kesalahan:", error);
+        });
+
+        const data1 = await response1.json();
+        if (data1.success) {
+            alert('Janji temu berhasil disetujui!');
+
+            console.log("Data persetujuan dikirim, menghapus baris dosen dan menambah data ke mahasiswa");
+
+            document.getElementById(rowId).remove();
+
+            // Menggunakan FormData untuk mengirim data ke endpoint mahasiswa
+            const mahasiswaFormData = new FormData();
+            mahasiswaFormData.append('nim', nim);
+            mahasiswaFormData.append('nama', nama);
+            mahasiswaFormData.append('janji_temu', JSON.stringify([{
+                tanggal: new Date().toISOString(),
+                materi: materi, // Menggunakan parameter materi
+            }]));
+
+            const response2 = await fetch("https://apiteam.v-project.my.id/api/perwalian/m/janjitemu", {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    // 'Content-Type': 'application/json', // Jangan set Content-Type saat menggunakan FormData
+                },
+                body: mahasiswaFormData,
             });
+
+            const data2 = await response2.json();
+
+            console.log("Respons dari endpoint mahasiswa:", data2);
+
+            if (data2.success) {
+                alert('Data berhasil ditambahkan ke tabel mahasiswa!');
+            } else {
+                alert(`Gagal menambah data ke tabel mahasiswa: ${data2.message}`);
+            }
+        } else {
+            alert(`Gagal menyetujui janji temu: ${data1.message}`);
         }
-        // Fungsi untuk menyetujui atau menolak janji temu
-        window.handleApproval = function (id, nama, nim, rowId) {
-          const action = confirm(
-            `Apakah Anda yakin ingin menyetujui janji temu ${nama} (NIM: ${nim})?`
-          );
-          if (action) {
-            meong(id, nama, nim, rowId); // Mengirim rowId ke fungsi meong
-          }
-        };
+    } catch (error) {
+        console.error('Ada kesalahan:', error);
+    }
+}
 
-        // Menggunakan event listener untuk form pencarian
-        document
-          .getElementById("searchForm")
-          .addEventListener("submit", function (e) {
-            e.preventDefault(); // Mencegah pengiriman form default
-            const searchValue = document.getElementById("cari").value;
-            loadData(searchValue); // Memuat data dengan filter pencarian
-          });
 
-        loadData(); // Memuat data saat halaman dimuat
-      });
+
+
+// Modifikasi fungsi handleApproval
+window.handleApproval = function (id, nama, nim, rowId, action, materi) {
+    const confirmationMessage = action === 'approve' ?
+        `Apakah Anda yakin ingin menyetujui janji temu ${nama} (NIM: ${nim})?` :
+        `Apakah Anda yakin ingin menolak janji temu ${nama} (NIM: ${nim})?`;
+
+    if (confirm(confirmationMessage)) {
+        meong(id, nama, nim, rowId, action, materi); // Tambahkan parameter materi
+    }
+};
+
+
+
+
+
+
+
+            // Menggunakan event listener untuk form pencarian
+            document.getElementById('searchForm').addEventListener('submit', function (e) {
+                e.preventDefault(); // Mencegah pengiriman form default
+                const searchValue = document.getElementById('cari').value;
+                loadData(searchValue); // Memuat data dengan filter pencarian
+            });
+
+            loadData(); // Memuat data saat halaman dimuat
+        });
     </script>
-  </body>
+</body>
+
 </html>
